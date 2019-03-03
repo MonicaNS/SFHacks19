@@ -20,6 +20,7 @@ export default class LogInScreen extends React.Component {
   };
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
         <LinearGradient
           colors={['#45B5AA', '#403F6F']}
@@ -30,7 +31,10 @@ export default class LogInScreen extends React.Component {
           style = {styles.container}
           >
           <Button title="Log In"     
-          type="solid" 
+          type="solid"
+          onPress={() =>
+          navigate('Main')
+        } 
           /> 
           
           </View>
