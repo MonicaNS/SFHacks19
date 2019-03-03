@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-native-elements';
 import {
   Image,
   Platform,
@@ -7,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  StatusBar
 } from 'react-native';
 import { WebBrowser, LinearGradient } from 'expo';
 
@@ -20,16 +22,21 @@ export default class LogInScreen extends React.Component {
   render() {
     return (
         <LinearGradient
-        colors={['#45B5AA', '#403F6F']}
-        style={{width: '100%', height: '100%'}}
+          colors={['#45B5AA', '#403F6F']}
+          style={{width: '100%', height: '100%'}}
         >
-         <View style={styles.container}>
-            <Text>
-                New Page
-            </Text>
-        
-         </View>
-         </LinearGradient>
+           <StatusBar barStyle="light-content" />    
+          <View
+          style = {styles.container}
+          >
+          <Button title="Log In"     
+          type="solid" 
+          /> 
+          
+          </View>
+
+       </LinearGradient>
+
     );
   }
 }
@@ -37,6 +44,8 @@ export default class LogInScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
   },
   
 });
